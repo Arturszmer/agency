@@ -3,6 +3,7 @@ Education project include:
     - spring security
     - hibernate
     - rest
+    - dockerize application
    
   - Angular 17
     - login and registration page
