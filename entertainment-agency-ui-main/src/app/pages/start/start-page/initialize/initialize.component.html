@@ -1,0 +1,20 @@
+<form [formGroup]="initializationForm" (ngSubmit)="initialize()">
+  <app-form-field class="log-input" label="{{ 'initializePage.username' | translate}}" [required]="true" [control]="initializationForm.controls['username']" [isInline]="false">
+    <app-input [inputClass]="'hp-input_login'" formControlName="username"></app-input>
+  </app-form-field>
+  <app-form-field class="log-input" label="{{ 'initializePage.email' | translate}}" [required]="true" [control]="initializationForm.controls['email']" [isInline]="false" [patternError]="regexErrors.email">
+    <app-input [inputClass]="'hp-input_login'" formControlName="email"></app-input>
+  </app-form-field>
+  <app-form-field class="log-input-pass" label="{{ 'initializePage.password' | translate}}" [required]="true" [control]="initializationForm.controls['password']" [isInline]="false" [patternError]="regexErrors.password">
+    <app-password [inputClass]="'hp-input_login'" formControlName="password"></app-password>
+  </app-form-field>
+  <app-form-field class="log-input-pass" label="{{ 'initializePage.confirmPassword' | translate}}" [required]="true" [control]="initializationForm.controls['confirmPassword']" [isInline]="false">
+    <app-password [inputClass]="'hp-input_login'" formControlName="confirmPassword"></app-password>
+  </app-form-field>
+  <button class="hp-button down" [disabled]="!initializationForm.valid" [ngClass]="{'invalid-submit': !initializationForm.valid}">
+    {{ 'initializePage.register' | translate}}
+  </button>
+</form>
+<div>
+  <button class="hp-page__footer language-tip" (click)="changeLanguage()">{{ 'loginPage.languageChange' | translate }} <mat-icon class="px-lg-2 icon-size">language</mat-icon></button>
+</div>

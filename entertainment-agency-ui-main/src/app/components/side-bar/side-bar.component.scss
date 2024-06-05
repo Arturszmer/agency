@@ -1,0 +1,27 @@
+@import "./../../../styles/colors";
+
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.sidenav-icon {
+  margin-right: 10px; /* adjust as needed */
+  color: $secondary-dark;
+}
+
+.nav-text {
+  //color: red;
+}

@@ -1,0 +1,154 @@
+{
+  "navbar": {
+    "hello": "Hello",
+    "account": "Account",
+    "logout": "Logout"
+  },
+  "sidenav": {
+    "dashboard": "Dashboard",
+    "contractors": "Contractors",
+    "user": "My account",
+    "users": "Users"
+  },
+  "loginPage": {
+    "label": "Username or email",
+    "password": "Password",
+    "login": "Login",
+    "languageChange": "Jeśli chcesz zmienić język kliknij tu: "
+  },
+  "initializePage": {
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "register": "Register"
+  },
+  "contractor": {
+    "title": "Contractors",
+    "openForm": "Add Contractor",
+    "closeForm": "Close Form",
+    "filter": "Filter",
+    "filterTip": "e.g. Smith",
+    "table": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone",
+      "actions": "Actions",
+      "menu": {
+        "details": "Details",
+        "update": "Edit",
+        "assign": "Assign to Project"
+      }
+    },
+    "addContractor": {
+      "title": "Contractor Data",
+      "form": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "pesel": "PESEL Number",
+        "birthDate": "Date of Birth",
+        "phone": "Phone",
+        "email": "Email Address",
+        "addressTitle": "Residence Address",
+        "city": "City",
+        "zipCode": "Postal Code",
+        "voivodeshipTip": "Select one",
+        "voivodeship": "Voivodeship",
+        "street": "Street",
+        "houseNumber": "House Number",
+        "apartmentNumber": "Apartment Number",
+        "description": "Additional Information about the Contractor"
+      },
+      "closeButton": "Close Form",
+      "createButton": "Save Contractor",
+      "addInfo": "New Contractor: {{firstName}} {{lastName}} has been added successfully."
+    },
+    "contractorDetails": {
+      "title": "Contractor data",
+      "buttons": {
+        "back": "Back",
+        "edit": "Edit",
+        "stopEditing": "Stop editing",
+        "assign": "Assign to project",
+        "accept": "Accept changes",
+        "delete": "Delete"
+      },
+      "messages": {
+        "deleteInfo": "Contractor: {{firstName}} {{lastName}} has been removed successfully.",
+        "editInfo": "Contractor: {{firstName}} {{lastName}} has been edited successfully."
+      }
+    }
+  },
+  "userDetails": {
+    "title": "User details",
+    "details": {
+      "username": "Username",
+      "email": "Email address",
+      "role": "User role",
+      "firstName": "Name",
+      "lastName": "Last name"
+    },
+    "buttons": {
+      "edit": "Edit",
+      "accept": "Accept",
+      "changePassword": "Change password",
+      "back": "Back"
+    },
+    "userChangePasswordPopup": {
+      "title": "Password change for the user.",
+      "onSuccess": "The password has been changed successfully."
+    }
+  },
+  "users": {
+    "title": "Users",
+    "openForm": "Add user",
+    "closeForm": "Close form",
+    "table": {
+      "username": "Username",
+      "email": "Email address",
+      "firstName": "Name",
+      "lastName": "Last name",
+      "role": "Role",
+      "actions": "Actions",
+      "menu": {
+        "update": "Edit",
+        "reset": "Reset password",
+        "block": "Deactivate user",
+        "unblock": "Activate user"
+      }
+    },
+    "actionsResult": {
+      "passwordReset": "Password of the user: {{username}} has been reset successfully.",
+      "userBlocked": "User {{username}} has been deactivated successfully.",
+      "userUnblocked": "User {{username}} has been activated successfully."
+    },
+    "addUser": {
+      "title": "User data",
+      "form": {
+        "username": "Username",
+        "email": "Email address",
+        "role": "User role",
+        "firstName": "Name",
+        "roles": "Roles"
+      },
+      "editUserPopup": {
+        "onSuccess": "User data: {{username}} has been edited successfully."
+      },
+      "addInfo": "New User: {{username}} has been added successfully.",
+      "createButton": "Save user"
+    }
+  },
+  "popupCloseMessages": {
+    "message": "Are you sure?",
+    "yes": "Yes",
+    "no": "Back",
+    "onOpenForm": "Do you really want to close the form? Any unsaved changes will be lost.",
+    "onSubmitEditContractor": "Are your sure that you want to change the contractor data?",
+    "onExitFromContractorEditing": "Your changes are not saved, are you sure you wanna leave this page?",
+    "onDeleteContractor": "Are you sure you want to delete this contractor? It will remove contractor permanently. Remember that if contractor has any contract you cannot delete him.",
+    "onResetPassword": "Are you sure you want to reset the password to the initial settings? This action is irreversible.",
+    "onBlockUser":  "Are you sure you want to deactivate user: {{username}}? You can reverse this action at any time and activate the user.",
+    "onUnblockUser": "Are you sure you want to activate user {{username}}?"
+  }
+}

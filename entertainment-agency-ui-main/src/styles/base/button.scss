@@ -1,0 +1,32 @@
+@import "../colors";
+@import "../mixins";
+
+.hp-button {
+  @include button-styles($secondary, $secondary, $secondary, $on-primary);
+}
+
+.hp-button-primary {
+  @include button-styles($primary, $primary, $primary, $on-primary);
+}
+
+.hp-button-warning {
+  @include button-styles($error, $error, $error, $on-primary);
+}
+
+.hp-gradient-button {
+  display: block;
+  padding: 8px 20px;
+  @include shadow-dark;
+  //width: 90%;
+  color: $txt-dark-main;
+  text-decoration: none;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to right, #4392FCFF, #C177E3FF) border-box;
+  border-radius: 6px;
+  border: 1.5px solid transparent;
+  &:hover, &:focus {
+    background: linear-gradient(#4392FCFF, #C177E3FF) padding-box,
+    linear-gradient(to right, #4392FCFF, #C177E3FF) border-box;
+    color: white;
+  }
+}

@@ -1,0 +1,35 @@
+<div class="grid-container">
+  <h1 class="mat-h1">{{ 'userDetails.title' | translate }}</h1>
+        <mat-card class="dashboard-card">
+          <mat-card-header>
+            <mat-card-title>
+              {{ userDetailsDto?.username }}
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="dashboard-card-content grid-container">
+            <form [formGroup]="userForm" novalidate (ngSubmit)="onSubmit()">
+              <app-form-field label="{{ 'userDetails.details.username' | translate }}" [required]="true" [control]="userForm.controls['username']" [isInline]="true">
+                <app-input formControlName="username"></app-input>
+              </app-form-field>
+              <app-form-field class="log-input" label="{{ 'userDetails.details.email' | translate }}" [required]="true" [control]="userForm.controls['email']" [isInline]="true">
+                <app-input [inputClass]="'hp-input'" formControlName="email"></app-input>
+              </app-form-field>
+              <app-form-field class="log-input" label="{{ 'userDetails.details.role' | translate }}" [required]="false" [control]="userForm.controls['roleType']" [isInline]="true">
+                <app-input [isReadonly]="true" [inputClass]="'hp-input'" formControlName="roleType"></app-input>
+              </app-form-field>
+              <app-form-field class="log-input" label="{{ 'userDetails.details.firstName' | translate }}" [required]="false" [control]="userForm.controls['firstName']" [isInline]="true">
+                <app-input [inputClass]="'hp-input'" formControlName="firstName"></app-input>
+              </app-form-field>
+              <app-form-field class="log-input" label="{{ 'userDetails.details.lastName' | translate }}" [required]="false" [control]="userForm.controls['lastName']" [isInline]="true">
+                <app-input [inputClass]="'hp-input'" formControlName="lastName"></app-input>
+              </app-form-field>
+              <div class="button-container-end">
+                <button class="hp-button" type="button" [hidden]="userForm.enabled" (click)="editForm()">{{'userDetails.buttons.edit' | translate}}</button>
+                <button class="hp-button-primary" type="button" [hidden]="userForm.enabled" (click)="changeUserPassword()">{{'userDetails.buttons.changePassword' | translate}}</button>
+                <button class="hp-button-primary" type="button" [hidden]="userForm.disabled" (click)="editForm()">{{'userDetails.buttons.back' | translate}}</button>
+                <button class="hp-gradient-button" type="submit" [hidden]="userForm.disabled">{{'userDetails.buttons.accept' | translate}}</button>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+</div>

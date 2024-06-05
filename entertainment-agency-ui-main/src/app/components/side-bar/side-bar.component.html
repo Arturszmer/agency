@@ -1,0 +1,15 @@
+<div class="logo-container">
+  <a href="/hr">
+    <img src="./assets/logo/logo-dashboard-reverse.svg" alt="Event Agency" class="logo">
+  </a>
+</div>
+<mat-nav-list>
+  <ng-container *ngFor="let item of routes[1].children">
+    <a [hidden]="!item.data['sideNav']" *appHasRole="item.data['scope']" mat-list-item [routerLinkActive]="'active-link'" [routerLink]="[item.path]">
+      <div class="flex-container">
+        <mat-icon color="primary" class="sidenav-icon">{{ item.data['icon'] }}</mat-icon>
+        <span class="nav-text">{{ item.data['text'] | translate }}</span>
+      </div>
+    </a>
+  </ng-container>
+</mat-nav-list>

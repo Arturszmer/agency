@@ -1,0 +1,17 @@
+@import "./../../../styles/colors";
+
+.nav-toolbar-color {
+  background: $secondary;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.username {
+  font-size: 1rem;
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+

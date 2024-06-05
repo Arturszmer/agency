@@ -1,0 +1,15 @@
+<div class="date">
+  <div>
+    <input class="hp-input" type="text" [matDatepicker]="datepicker!"
+           (dateChange)="onChange($event)"
+           [attr.disabled]="isDisabled ? true : null"
+           [formControl]="value"
+           [min]="min"
+           [max]="max"
+           [placeholder]="placeholder || 'choose a date'">
+    <div class="hint">YYYY-MM-DD</div>
+  </div>
+  <mat-datepicker-toggle matIconSuffix [for]="datepicker" [disabled]="isDisabled"></mat-datepicker-toggle>
+  <mat-datepicker #datepicker (close)="onClosed()"></mat-datepicker>
+</div>
+

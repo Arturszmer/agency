@@ -1,0 +1,23 @@
+
+<form class="padding-container" [formGroup]="userForm" novalidate (ngSubmit)="onSubmit()">
+  <h1 class="separate-from-header">{{ 'users.addUser.title' | translate }}: </h1>
+  <app-form-field class="log-input" label="{{ 'users.addUser.form.username' | translate }}" [required]="true" [control]="userForm.controls['username']" [isInline]="true" [patternError]="regexErrors.latin">
+    <app-input [inputClass]="'hp-input'" formControlName="username"></app-input>
+  </app-form-field>
+  <app-form-field class="log-input" label="{{ 'users.addUser.form.email' | translate }}" [required]="true" [control]="userForm.controls['email']" [isInline]="true" [patternError]="regexErrors.email">
+    <app-input [inputClass]="'hp-input'" formControlName="email"></app-input>
+  </app-form-field>
+  <app-form-field class="log-input" label="{{ 'users.addUser.form.firstName' | translate }}" [control]="userForm.controls['firstName']" [isInline]="true" [patternError]="regexErrors.phone">
+    <app-input [inputClass]="'hp-input'" formControlName="firstName"></app-input>
+  </app-form-field>
+  <app-form-field class="log-input" label="{{ 'users.addUser.form.lastName' | translate }}" [control]="userForm.controls['lastName']" [isInline]="true">
+    <app-input [inputClass]="'hp-input'" formControlName="lastName"></app-input>
+  </app-form-field>
+  <app-form-field label="{{ 'users.addUser.form.roles' | translate }}" [required]="true" [control]="userForm.get('roleType')" [isInline]="true">
+    <app-autocomplete formControlName="roleType" [items]="roles"></app-autocomplete>
+  </app-form-field>
+  <div class="button-container-end">
+    <button class="hp-button" type="button" (click)="onClose(true)">{{ 'contractor.addContractor.closeButton' | translate }}</button>
+    <button class="hp-gradient-button" type="submit">{{ 'users.addUser.createButton' | translate }}</button>
+  </div>
+</form>

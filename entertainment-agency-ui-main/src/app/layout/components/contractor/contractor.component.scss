@@ -1,0 +1,13 @@
+@import "./../../../../styles/colors";
+
+.full-width-table {
+  width: 100%;
+}
+
+.example-container {
+  color: $secondary-dark;
+}
+
+td.mat-cell {
+  user-select: text;
+}

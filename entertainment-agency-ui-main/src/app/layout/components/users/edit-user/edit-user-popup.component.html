@@ -1,0 +1,30 @@
+<mat-card class="popup-container">
+  <mat-card-header>
+    <mat-card-title>
+      {{ 'users.editPopup.title' | translate}}: {{data.username}}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content grid-container">
+    <form [formGroup]="editUserForm" novalidate (ngSubmit)="onSubmit()">
+      <app-form-field class="log-input" label="{{ 'users.addUser.form.username' | translate }}" [required]="true" [control]="editUserForm.controls['username']" [isInline]="true" [patternError]="regexErrors.latin">
+        <app-input [inputClass]="'hp-input'" formControlName="username"></app-input>
+      </app-form-field>
+      <app-form-field class="log-input" label="{{ 'users.addUser.form.email' | translate }}" [required]="true" [control]="editUserForm.controls['email']" [isInline]="true" [patternError]="regexErrors.email">
+        <app-input [inputClass]="'hp-input'" formControlName="email"></app-input>
+      </app-form-field>
+      <app-form-field class="log-input" label="{{ 'users.addUser.form.firstName' | translate }}" [control]="editUserForm.controls['firstName']" [isInline]="true" [patternError]="regexErrors.phone">
+        <app-input [inputClass]="'hp-input'" formControlName="firstName"></app-input>
+      </app-form-field>
+      <app-form-field class="log-input" label="{{ 'users.addUser.form.lastName' | translate }}" [control]="editUserForm.controls['lastName']" [isInline]="true">
+        <app-input [inputClass]="'hp-input'" formControlName="lastName"></app-input>
+      </app-form-field>
+      <app-form-field label="{{ 'users.addUser.form.roles' | translate }}" [required]="true" [control]="editUserForm.get('roleType')" [isInline]="true">
+        <app-autocomplete formControlName="roleType" [items]="roles"></app-autocomplete>
+      </app-form-field>
+      <div class="button-container-end">
+        <button class="hp-button" mat-dialog-close type="button">{{'userDetails.buttons.back' | translate}}</button>
+        <button class="hp-gradient-button" type="submit">{{'userDetails.buttons.accept' | translate}}</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

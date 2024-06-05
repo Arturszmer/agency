@@ -1,0 +1,26 @@
+<mat-toolbar class="nav-toolbar-color">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="toggleSidenav()">
+    <mat-icon aria-label="Side nav toggle icon" class="icon-colour-white">menu</mat-icon>
+  </button>
+  <span class="example-spacer"></span>
+  <span class="username">{{'navbar.hello' | translate }}: {{username}}</span>
+
+  <button mat-button [matMenuTriggerFor]="language">
+    <mat-icon class="icon-colour-white">language</mat-icon>
+  </button>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon class="icon-colour-white">person</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <a mat-menu-item [routerLink]="'user'">{{ 'navbar.account' | translate }}</a>
+    <button mat-menu-item (click)="logout()">{{ 'navbar.logout' | translate }}</button>
+  </mat-menu>
+  <mat-menu #language="matMenu">
+    <button mat-menu-item (click)="setLanguage('pl')">pl</button>
+    <button mat-menu-item (click)="setLanguage('en')">en</button>
+  </mat-menu>
+</mat-toolbar>

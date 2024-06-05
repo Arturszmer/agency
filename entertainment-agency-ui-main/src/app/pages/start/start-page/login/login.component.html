@@ -1,0 +1,14 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <app-form-field class="log-input" label="{{'loginPage.label' | translate}}" [required]="true" [control]="loginForm.controls['usernameOrEmail']" [isInline]="false">
+    <app-input [inputClass]="'hp-input_login'" formControlName="usernameOrEmail"></app-input>
+  </app-form-field>
+  <app-form-field class="log-input-pass" label="{{'loginPage.password' | translate}}" [required]="true" [control]="loginForm.controls['password']" [isInline]="false">
+    <app-password [inputClass]="'hp-input_login'" formControlName="password"></app-password>
+  </app-form-field>
+    <button class="hp-button down">
+      {{ 'loginPage.login' | translate }}
+    </button>
+</form>
+<div>
+  <button class="hp-page__footer language-tip" (click)="changeLanguage()">{{ 'loginPage.languageChange' | translate }} <mat-icon class="px-lg-2 icon-size">language</mat-icon></button>
+</div>

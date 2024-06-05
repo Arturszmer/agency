@@ -1,0 +1,14 @@
+<mat-dialog-content class="dialog-content">
+  <div class="warning-icon">
+    <mat-icon color="warn">warning</mat-icon>
+  </div>
+  <div class="message">
+    <h2>{{ 'popupCloseMessages.message' | translate}}</h2>
+    <p>{{data}}</p>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="dialog-actions">
+  <button mat-button mat-dialog-close>{{ 'popupCloseMessages.no' | translate }}</button>
+  <button mat-button color="warn" [mat-dialog-close]="true">{{ 'popupCloseMessages.yes' | translate }}</button>
+</mat-dialog-actions>

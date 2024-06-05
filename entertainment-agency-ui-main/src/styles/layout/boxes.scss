@@ -1,0 +1,26 @@
+.hp-box-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to right, #4392FCFF, #C177E3FF) border-box;
+  //border: 1px solid transparent;
+}
+
+.hp-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 70px;
+  gap: 50px;
+}
+
+.hp-gradient-border {
+  background: linear-gradient(#F8F8F8, #F8F8F8) padding-box,
+  linear-gradient(to right, #4392FCFF, #C177E3FF) border-box;
+  border: 1px solid transparent;
+  background: #F8F8F8;
+}

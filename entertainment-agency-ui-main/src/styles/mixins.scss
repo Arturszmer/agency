@@ -1,0 +1,35 @@
+@import "./colors.scss";
+
+@mixin shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+@mixin shadow-dark {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+@mixin shadow-secondary {
+  box-shadow: 0 0 15px rgba(193, 119, 227, 0.4);
+}
+
+@mixin card {
+  padding: 32px;
+  background: $base;
+  border-radius: 8px;
+  @include shadow;
+}
+
+@mixin button-styles($border-color, $hover-bg, $hover-border, $hover-color) {
+  padding: 8px 20px;
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid $border-color;
+  transition: 0.25s;
+  margin: 0 4px;
+  @include shadow-dark;
+
+  &:hover, &:focus {
+    background: $hover-bg;
+    border: 1px solid $hover-border;
+    color: $hover-color;
+  }
+}

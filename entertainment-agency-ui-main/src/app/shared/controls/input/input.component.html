@@ -1,0 +1,9 @@
+<input type="text"
+       [class]="inputClass"
+       [value]="value"
+       [readOnly]="isReadonly"
+       [placeholder]="placeholder || ''"
+       [attr.disabled]="isDisabled ? true : null"
+       (keyup)="onKeyup($event.target)"
+       (blur)="onBLur()"
+>

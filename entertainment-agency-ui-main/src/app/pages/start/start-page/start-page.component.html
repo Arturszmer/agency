@@ -1,0 +1,11 @@
+  <div class="hp-box-absolute">
+    <div class="hp-card">
+      <img src="./assets/logo/EA-logo.svg" alt="Entertainment Agency" height="400" width="400">
+    </div>
+    <ng-container *ngIf="isInitialized">
+      <app-login></app-login>
+    </ng-container>
+    <ng-container *ngIf="!isInitialized">
+      <app-initialize></app-initialize>
+    </ng-container>
+  </div>

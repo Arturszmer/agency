@@ -1,0 +1,76 @@
+<h2>Actions</h2>
+
+<app-button (click)="onToggleSpinner()">Toggle Spinner</app-button>
+<app-button (click)="onError()">show Error</app-button>
+<app-button (click)="onSuccess()">Show success</app-button>
+<app-button (click)="onShowMessage()">Show success</app-button>
+<br>
+<br>
+<h2> FORM: </h2>
+<div class="wrapper">
+  <app-spinner *ngIf="showSpinner"></app-spinner>
+  <form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+
+    <app-button (click)="onPatchValue()">Patch value</app-button>
+    <app-button (click)="onToggleInline()">toggle form</app-button>
+    <app-button (click)="onToggleDisable()">disable form</app-button>
+    <app-button (click)="onSubmit()">Submit</app-button>
+
+    <app-form-field label="Input" [required]="true" [control]="form.controls['input']" [isInline]="isInline" [patternError]="regexErrors.email">
+      <app-input formControlName="input"></app-input>
+    </app-form-field>
+    <app-form-field label="Password" [required]="true" [control]="form.controls['password']" [isInline]="isInline">
+      <app-password formControlName="password"></app-password>
+    </app-form-field>
+    <app-form-field label="select" [required]="true" [control]="form.controls['select']" [isInline]="isInline">
+      <app-select formControlName="select" [items]="items">
+
+      </app-select>
+    </app-form-field>
+    <app-form-field label="autocomplete" [required]="true" [control]="form.controls['autocomplete']" [isInline]="isInline">
+      <app-autocomplete formControlName="autocomplete" [items]="items">
+
+      </app-autocomplete>
+    </app-form-field>
+    <app-form-field label="checkbox" [required]="true" [control]="form.controls['select']" [isInline]="isInline">
+      <app-checkbox [items]="items" formControlName="checkbox"></app-checkbox>
+    </app-form-field>
+    <app-form-field label="radios" [required]="true" [control]="form.controls['radios']" [isInline]="isInline">
+      <app-radios [items]="items" formControlName="radios"></app-radios>
+    </app-form-field>
+    <app-form-field label="date" [required]="true" [control]="form.controls['date']" [isInline]="isInline">
+      <app-date formControlName="date" placeholder="Date"></app-date>
+    </app-form-field>
+    <app-form-field label="dateRange" [required]="true" [control]="form.controls['dateRange']" [isInline]="isInline">
+      <app-date-range formControlName="dateRange"></app-date-range>
+    </app-form-field>
+  </form>
+
+</div>
+<code>
+  {{ form.value | json}}
+</code>
+
+<h2>Mixins</h2>
+
+<div class="shadow-lg">Shadow mixin</div>
+
+<p>Lorem ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+  of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+  PageMaker including versions of Lorem Ipsum.
+  Lorem ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+  of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+  PageMaker including versions of Lorem Ipsum.
+  Lorem ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+  of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+  PageMaker including versions of Lorem Ipsum.
+</p>

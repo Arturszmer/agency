@@ -1,0 +1,7 @@
+<div class="select hp-input" [class.select_disabled]="isDisabled">
+  <mat-select [value]="value" [disabled]="isDisabled" (selectionChange)="onChanged($event)" (blur)="onBLur()">
+    <mat-option *ngFor="let item of items" [value]="item.value">
+      {{item.label}}
+    </mat-option>
+  </mat-select>
+</div>

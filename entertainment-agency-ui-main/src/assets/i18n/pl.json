@@ -1,0 +1,168 @@
+{
+  "navbar": {
+    "hello": "Witaj",
+    "account": "Konto użytkownika",
+    "logout": "Wyloguj"
+  },
+  "sidenav": {
+    "dashboard": "Panel klienta",
+    "contractors": "Wykonawcy",
+    "user": "Moje konto",
+    "users": "Użytkownicy"
+  },
+  "loginPage": {
+    "label": "Nazwa użytkownika lub email",
+    "password": "Hasło",
+    "login": "Zaloguj się",
+    "languageChange": "If you want to change language click here: "
+  },
+  "initializePage": {
+    "username": "Nazwa użytkownika",
+    "email": "Email",
+    "password": "Hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "register": "Zarejestruj się"
+  },
+  "contractor": {
+    "title": "Wykonawcy",
+    "openForm": "Dodaj wykonawcę",
+    "closeForm": "Zamknij formularz",
+    "filter": "Filtr",
+    "filterTip": "np. Kowalski",
+    "table": {
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "email": "Adres email",
+      "phone": "Telefon",
+      "actions": "Akcje",
+      "menu": {
+        "details": "Szczegóły",
+        "update": "Edytuj",
+        "assign": "Przypisz do projektu"
+      }
+    },
+    "addContractor": {
+      "title": "Dane wykonawcy",
+      "form": {
+        "firstName": "Imię",
+        "lastName": "Nazwisko",
+        "pesel": "Nr PESEL",
+        "birthDate": "Data urodzenia",
+        "phone": "Telefon",
+        "email": "Adres email",
+        "addressTitle": "Adres zamieszkania",
+        "city": "Miejscowość",
+        "zipCode": "Kod pocztowy",
+        "voivodeshipTip": "Wybierz jedno",
+        "voivodeship": "Województwo",
+        "street": "Ulica",
+        "houseNumber": "Numer domu",
+        "apartmentNumber": "Numer mieszkania",
+        "description": "Dodatkowe informacje o wykonawcy"
+      },
+      "closeButton": "Zamknij formularz",
+      "createButton": "Zapisz wykonawcę",
+      "addInfo": "Nowy wykonawca: {{firstName}} {{lastName}} został dodany prawidłowo."
+    },
+    "contractorDetails": {
+      "title": "Dane wykonwcy",
+      "buttons": {
+        "back": "Powrót",
+        "edit": "Edytuj dane",
+        "stopEditing": "Wstrzymaj edycje",
+        "assign": "Przypisz do projektu",
+        "accept": "Zaakceptuj zmiany",
+        "delete": "Usuń wykonawce"
+      },
+      "messages": {
+        "deleteInfo": "Wykonawca: {{firstName}} {{lastName}} został usunięty prawidłowo.",
+        "editInfo": "Wykonawca {{firstName}} {{lastName}} został edytowany prawidłowo."
+      }
+    }
+  },
+  "userDetails": {
+    "title": "Dane użytkownika",
+    "details": {
+      "username": "Nazwa użytkownika",
+      "email": "Adres email",
+      "role": "Rola użytkownika",
+      "firstName": "Imię",
+      "lastName": "Nazwisko"
+    },
+    "buttons": {
+      "edit": "Zmień dane",
+      "accept": "Zaakceptuj",
+      "changePassword": "Zmień hasło",
+      "back": "Anuluj"
+    },
+    "userChangePasswordPopup": {
+      "title": "Zmiana hasła dla użytkownika",
+      "onSuccess": "Zmiana hasła przebiegła pomyślnie."
+    }
+  },
+  "users": {
+    "title": "Użytkownicy",
+    "openForm": "Dodaj użytkownika",
+    "closeForm": "Zamknij formularz",
+    "table": {
+      "username": "Nazwa użytkownika",
+      "email": "Email",
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "actions": "Akcje",
+      "menu": {
+        "update": "Edytuj",
+        "reset": "Zresetuj hasło",
+        "block": "Dezaktywuj użytkownika",
+        "unblock": "Aktywuj użytkownika"
+      }
+    },
+    "actionsResult": {
+      "passwordReset": "Hasło użytkownika: {{username}} zostało zresetowane prawidłowo.",
+      "userBlocked": "Użytkownik {{username}} został dezaktywowany prawidłowo.",
+      "userUnblocked": "Użytkownik {{username}} został aktywowany prawidłowo."
+    },
+    "addUser": {
+      "title": "Dane użytkownika",
+      "form": {
+        "username": "Nazwa użytkownika",
+        "email": "Adres email",
+        "firstName": "Imię",
+        "lastName": "Nazwisko",
+        "roles": "Role"
+      },
+      "editUserPopup": {
+        "onSuccess": "Dane użytkownika {{username}} zostały edytowane prawidłowo."
+      },
+      "addInfo": "Nowy uzytkownik: {{username}} został dodany prawidłowo.",
+      "createButton": "Zapisz użytkownika"
+    }
+  },
+  "popupCloseMessages": {
+    "message": "Uwaga!",
+    "yes": "Tak",
+    "no": "Cofnij",
+    "onOpenForm": "Czy na pewno chcesz zamknąć formularz? Wszystkie zmiany zostaną utracone.",
+    "onSubmitEditContractor": "Czy jesteś pewny, że chcesz zapisać dane wykonawcy?",
+    "onExitFromContractorEditing": "Twoje zmiany nie zostały zapisane, czy na pewno chcesz opuścić tę stronę?",
+    "onDeleteContractor": "Czy jesteś pewny, że chcesz usunąć tego wykonawcę? Wykonawca zostanie usunięty bezpowrotnie. Pamiętaj, że nie możesz usunąć wykonawcy, który posiada umowy.",
+    "onResetPassword": "Czy jesteś pewny, że chcesz zresetować hasło do ustawień początkowych? Ta akcja jest nieodwołalna.",
+    "onBlockUser": "Czy jesteś pewny, że chcesz dezaktywować użytkownika {{username}}? Akcje możesz w każdej chwili odwrócić i aktywować użytkownika.",
+    "onUnblockUser": "Czy jesteś pewny, że chcesz aktywować użytkownika {{username}}?"
+
+  },
+  "exception": {
+    "default": "Coś poszło nie tak, skontaktuj się z administratorem.",
+    "user": {
+      "USER001": "Użytkownik nie został znaleziony.",
+      "USER002": "Potwierdzenie nowego hasła jest niezgodne.",
+      "USER003": "Obecne hasło jest nieprawidłowe.",
+      "USER004": "Nowe hasło nie może być takie samo jak obecne.",
+      "USER005": "Nie można zablokować użytkownika, który jest już zablokowany.",
+      "USER006": "Nie można odblokować użytkownika, który nie jest zablokowany.",
+      "USER007": "Nie można zablokować swojego konta.",
+      "ERR001": "Wystąpił niespodziewany błąd, skontaktuj się z administratorem."
+
+    }
+  }
+}

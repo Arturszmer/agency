@@ -1,0 +1,51 @@
+
+  <form class="padding-container" [formGroup]="contractorForm" novalidate (ngSubmit)="onSubmit()">
+    <h1 class="separate-from-header">{{ 'contractor.addContractor.title' | translate }}: </h1>
+    <app-form-field label="{{ 'contractor.addContractor.form.firstName' | translate }}" [required]="true" [control]="contractorForm.controls['firstName']" [isInline]="true">
+      <app-input formControlName="firstName"></app-input>
+    </app-form-field>
+    <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.lastName' | translate }}" [required]="true" [control]="contractorForm.controls['lastName']" [isInline]="true">
+      <app-input [inputClass]="'hp-input'" formControlName="lastName"></app-input>
+    </app-form-field>
+    <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.pesel' | translate }}" [required]="true" [control]="contractorForm.controls['pesel']" [isInline]="true" [patternError]="regexErrors.numbers">
+      <app-input [inputClass]="'hp-input'" formControlName="pesel"></app-input>
+    </app-form-field>
+    <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.birthDate' | translate }}" [required]="true" [control]="contractorForm.controls['birthDate']" [isInline]="true" [patternError]="regexErrors.date">
+      <app-date formControlName="birthDate" placeholder="Date"></app-date>
+    </app-form-field>
+    <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.phone' | translate }}" [control]="contractorForm.controls['phone']" [isInline]="true" [patternError]="regexErrors.phone">
+      <app-input [inputClass]="'hp-input'" formControlName="phone"></app-input>
+    </app-form-field>
+    <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.email' | translate }}" [control]="contractorForm.controls['email']" [isInline]="true">
+      <app-input [inputClass]="'hp-input'" formControlName="email"></app-input>
+    </app-form-field>
+    <mat-divider></mat-divider>
+    <h3 class="separate-from-header">{{ 'contractor.addContractor.form.addressTitle' | translate }}: </h3>
+    <div formGroupName="addressDto">
+      <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.city' | translate }}" [required]="true" [control]="contractorForm.get('addressDto.city')" [isInline]="true">
+        <app-input [inputClass]="'hp-input'" formControlName="city"></app-input>
+      </app-form-field>
+      <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.zipCode' | translate }}" [required]="true" [control]="contractorForm.get('addressDto.zipCode')" [isInline]="true" [patternError]="regexErrors.zipCode">
+        <app-input [inputClass]="'hp-input'" formControlName="zipCode"></app-input>
+      </app-form-field>
+      <app-form-field label="{{ 'contractor.addContractor.form.voivodeship' | translate }}" [required]="true" [control]="contractorForm.get('addressDto.voivodeship')" [isInline]="true">
+        <app-autocomplete formControlName="voivodeship" [items]="voivodeships"></app-autocomplete>
+      </app-form-field>
+      <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.street' | translate }}" [control]="contractorForm.get('addressDto.street')" [isInline]="true">
+        <app-input [inputClass]="'hp-input'" formControlName="street"></app-input>
+      </app-form-field>
+      <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.houseNumber' | translate }}" [required]="true" [control]="contractorForm.get('addressDto.houseNumber')" [isInline]="true">
+        <app-input [inputClass]="'hp-input'" formControlName="houseNumber"></app-input>
+      </app-form-field>
+      <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.apartmentNumber' | translate }}" [control]="contractorForm.get('addressDto.apartmentNumber')" [isInline]="true">
+        <app-input [inputClass]="'hp-input'" formControlName="apartmentNumber"></app-input>
+      </app-form-field>
+    </div>
+    <app-form-field class="log-input" label="{{ 'contractor.addContractor.form.description' | translate }}" [control]="contractorForm.controls['contractorDescription']" [isInline]="true">
+      <app-text-area [inputClass]="'hp-input_textarea'" formControlName="contractorDescription"></app-text-area>
+    </app-form-field>
+      <div class="button-container-end">
+        <button class="hp-button" type="button" (click)="onClose(true)">{{ 'contractor.addContractor.closeButton' | translate }}</button>
+        <button class="hp-gradient-button" type="submit">{{ 'contractor.addContractor.createButton' | translate }}</button>
+      </div>
+  </form>

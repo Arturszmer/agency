@@ -1,0 +1,16 @@
+@import "./styles/colors.scss";
+
+.invalid-submit {
+  background-color: white !important;
+  cursor: default;
+  color: $on-base;
+}
+
+.language-tip {
+  font-size: 0.75rem;
+  color: $secondary-dark;
+}
+
+.icon-size {
+  font-size: 0.90rem;
+}
